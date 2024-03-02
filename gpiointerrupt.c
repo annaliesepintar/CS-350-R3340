@@ -457,13 +457,13 @@ void checkLedFlag(void)
     temperature = readTemp();
 
     // if temp is greater than set point, turn heater on
-    if(temperature > setpoint)
+    if(temperature < setpoint)
     {
         heat = 1;
     }
 
     // if temp is less than or equal to set point, turn heater off
-    if(temperature <= setpoint)
+    if(temperature >= setpoint)
     {
         heat = 0;
     }
